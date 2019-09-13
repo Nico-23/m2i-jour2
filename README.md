@@ -1,6 +1,6 @@
 # m2i-jour2
 
-Projet de formation GIT - deuxième journée
+Projet de formation GIT - deuxiÃ¨me journÃ©e
 =======================
 
 Documentation GIT
@@ -16,20 +16,20 @@ git branch [--color[=<when>] | --no-color] [--show-current]
 	[--contains [<commit]] [--no-contains [<commit>]]
 	[--points-at <object>] [--format=<format>]
 	[(-r | --remotes) | (-a | --all)]
-	[--list] [<pattern>…?]
+	[--list] [<pattern>Â…?]
 git branch [--track | --no-track] [-f] <branchname> [<start-point>]
 git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
 git branch --unset-upstream [<branchname>]
 git branch (-m | -M) [<oldbranch>] <newbranch>
 git branch (-c | -C) [<oldbranch>] <newbranch>
-git branch (-d | -D) [-r] <branchname>…?
+git branch (-d | -D) [-r] <branchname>Â…?
 git branch --edit-description [<branchname>]
 DESCRIPTION
 If --list is given, or if there are no non-option arguments, existing branches are listed; the current branch will be highlighted in green and marked with an asterisk. Any branches checked out in linked worktrees will be highlighted in cyan and marked with a plus sign. Option -r causes the remote-tracking branches to be listed, and option -a shows both local and remote branches.
 If a <pattern> is given, it is used as a shell wildcard to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it matches any of the patterns.
 Note that when providing a <pattern>, you must use --list; otherwise the command may be interpreted as branch creation.
 With --contains, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), --no-contains inverts it. With --merged, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With --no-merged only branches not merged into the named commit will be listed. If the <commit> argument is missing it defaults to HEAD (i.e. the tip of the current branch).
-The command’s second form creates a new branch head named <branchname> which points to the current HEAD, or <start-point> if given. As a special case, for <start-point>, you may use "A...B" as a shortcut for the merge base of A and B if there is exactly one merge base. You can leave out at most one of A and B, in which case it defaults to HEAD.
+The commandÂ’s second form creates a new branch head named <branchname> which points to the current HEAD, or <start-point> if given. As a special case, for <start-point>, you may use "A...B" as a shortcut for the merge base of A and B if there is exactly one merge base. You can leave out at most one of A and B, in which case it defaults to HEAD.
 Note that this will create the new branch, but it will not switch the working tree to it; use "git switch <newbranch>" to switch to the new branch.
 When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the branch.<name>.remote and branch.<name>.merge configuration entries) so that git pull will appropriately merge from the remote-tracking branch. This behavior may be changed via the global branch.autoSetupMerge configuration flag. That setting can be overridden by using the --track and --no-track options, and changed later using git branch --set-upstream-to.
 With a -m or -M option, <oldbranch> will be renamed to <newbranch>. If <oldbranch> had a corresponding reflog, it is renamed to match <newbranch>, and a reflog entry is created to remember the branch renaming. If <newbranch> exists, -M must be used to force the rename to happen.
@@ -43,7 +43,7 @@ Delete a branch. The branch must be fully merged in its upstream branch, or in H
 -D 
 Shortcut for --delete --force.
 --create-reflog 
-Create the branch’s reflog. This activates recording of all changes made to the branch ref, enabling use of date based sha1 expressions such as "<branchname>@{yesterday}". Note that in non-bare repositories, reflogs are usually enabled by default by the core.logAllRefUpdates config option. The negated form --no-create-reflog only overrides an earlier --create-reflog, but currently does not negate the setting of core.logAllRefUpdates.
+Create the branchÂ’s reflog. This activates recording of all changes made to the branch ref, enabling use of date based sha1 expressions such as "<branchname>@{yesterday}". Note that in non-bare repositories, reflogs are usually enabled by default by the core.logAllRefUpdates config option. The negated form --no-create-reflog only overrides an earlier --create-reflog, but currently does not negate the setting of core.logAllRefUpdates.
 -f 
 --force 
 Reset <branchname> to <startpoint>, even if <branchname> exists already. Without -f, git branch refuses to change an existing branch. In combination with -d (or --delete), allow deleting the branch irrespective of its merged status. In combination with -m (or --move), allow renaming the branch even if the new branch name already exists, the same applies for -c (or --copy).
@@ -82,12 +82,12 @@ Print the name of the current branch. In detached HEAD state, nothing is printed
 -v 
 -vv 
 --verbose 
-When in list mode, show sha1 and commit subject line for each head, along with relationship to upstream branch (if any). If given twice, print the path of the linked worktree (if any) and the name of the upstream branch, as well (see also git remote show <remote>). Note that the current worktree’s HEAD will not have its path printed (it will always be your current directory).
+When in list mode, show sha1 and commit subject line for each head, along with relationship to upstream branch (if any). If given twice, print the path of the linked worktree (if any) and the name of the upstream branch, as well (see also git remote show <remote>). Note that the current worktreeÂ’s HEAD will not have its path printed (it will always be your current directory).
 -q 
 --quiet 
 Be more quiet when creating or deleting a branch, suppressing non-error messages.
 --abbrev=<length> 
-Alter the sha1’s minimum display length in the output listing. The default value is 7 and can be overridden by the core.abbrev config option.
+Alter the sha1Â’s minimum display length in the output listing. The default value is 7 and can be overridden by the core.abbrev config option.
 --no-abbrev 
 Display the full sha1s in the output listing rather than abbreviating them.
 -t 
@@ -108,7 +108,7 @@ Open an editor and edit the text to explain what the branch is for, to be used b
 --contains [<commit>] 
 Only list branches which contain the specified commit (HEAD if not specified). Implies --list.
 --no-contains [<commit>] 
-Only list branches which don’t contain the specified commit (HEAD if not specified). Implies --list.
+Only list branches which donÂ’t contain the specified commit (HEAD if not specified). Implies --list.
 --merged [<commit>] 
 Only list branches whose tips are reachable from the specified commit (HEAD if not specified). Implies --list, incompatible with --no-merged.
 --no-merged [<commit>] 
@@ -153,10 +153,10 @@ NOTES
 If you are creating a branch that you want to switch to immediately, it is easier to use the "git switch" command with its -c option to do the same thing with a single command.
 The options --contains, --no-contains, --merged and --no-merged serve four related but different purposes:
 --contains <commit> is used to find all branches which will need special attention if <commit> were to be rebased or amended, since those branches contain the specified <commit>.
---no-contains <commit> is the inverse of that, i.e. branches that don’t contain the specified <commit>.
+--no-contains <commit> is the inverse of that, i.e. branches that donÂ’t contain the specified <commit>.
 --merged is used to find all branches which can be safely deleted, since those branches are fully contained by HEAD.
 --no-merged is used to find branches which are candidates for merging into HEAD, since those branches are not fully contained by HEAD.
 SEE ALSO
-git-check-ref-format[1], git-fetch[1], git-remote[1], “Understanding history: What is a branch?” in the Git User’s Manual.
+git-check-ref-format[1], git-fetch[1], git-remote[1], Â“Understanding history: What is a branch?Â” in the Git UserÂ’s Manual.
 GIT
 Part of the git[1] suite
