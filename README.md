@@ -4,6 +4,7 @@ Projet de formation GIT - deuxième journée
 =======================
 
 Documentation GIT
+-----------------
 
 NAME
 git-branch - List, create, or delete branches
